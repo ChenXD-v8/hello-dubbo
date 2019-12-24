@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: hello-dubbo-service-user-consumer
+server:
+  port: 9090
+user:
+  service:
+    version: 1.0.0
+dubbo:
+  scan:
+    basePackages: com.funtl.hello.dubbo.service.user.consumer.controller
+  application:
+    id: hello-dubbo-service-user-consumer
+    name: hello-dubbo-service-user-consumer
+  protocol:
+    id: dubbo
+    name: dubbo
+    port: 12345
+    serialization: kryo
+  registry:
+    id: zookeeper
+    address: zookeeper://39.106.74.91:2181?backup=39.106.74.91:2182,39.106.74.91:2183
+
